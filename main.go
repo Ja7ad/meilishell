@@ -3,8 +3,8 @@ package main
 import (
 	"errors"
 	"fmt"
+	"github.com/Ja7ad/meilishell/shell"
 	"github.com/Ja7ad/meilishell/util"
-	shell "github.com/brianstrauch/cobra-shell"
 	"github.com/c-bata/go-prompt"
 	"github.com/fatih/color"
 	"github.com/inancgumus/screen"
@@ -29,7 +29,7 @@ const header = `Welcome to MeiliShell %s | https://github.com/Ja7ad/meilishell
 
 const (
 	major = 0
-	minor = 1
+	minor = 2
 	patch = 0
 )
 
