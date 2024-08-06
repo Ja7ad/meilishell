@@ -18,7 +18,6 @@ MeiliShell is a interactive shell for manage Meilisearch
 - Connect to other Meilisearch server with `connect` command
 - Help commands with example
 - Meilisearch management with shell
-- Standard result of responses
 
 ## Installation
 
