@@ -1,6 +1,8 @@
 # MeiliShell
 MeiliShell is a interactive shell for manage Meilisearch
 
+[![asciicast](https://asciinema.org/a/670976.svg)](https://asciinema.org/a/670976)
+
 ### Table of content
 
 - [Features](#features)
