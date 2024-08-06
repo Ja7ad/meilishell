@@ -9,6 +9,7 @@ MeiliShell is a interactive shell for manage Meilisearch
 - [Installation](#installation)
   - [Release](#release)
   - [Go Installation](#go-installation)
+- [Contributing](#contributing)
 
 ## Features
 
@@ -34,3 +35,7 @@ Install the package using Go:
 ```shell
 go install github.com/Ja7ad/meilishell@latest
 ```
+
+## Contributing
+
+[Contributing](CONTRIBUTING.md)
