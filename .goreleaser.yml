@@ -1,0 +1,66 @@
+builds:
+  - id: meilishell
+    main: ./main.go
+    dir: ./
+    binary: meilishell
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - "6"
+      - "7"
+    ignore:
+      - goos: linux
+        goarch: arm
+        goarm: "7"
+      - goos: windows
+        goarch: arm
+        goarm: "7"
+      - goos: android
+        goarch: arm
+        goarm: "6"
+      - goos: android
+        goarch: arm
+        goarm: "7"
+      - goos: android
+        goarch: "386"
+
+archives:
+  - builds:
+      - meilishell
+    name_template: 'meilishell_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE
+      - README.md
+
+nfpms:
+  - license: MIT
+    maintainer: Javad Rajabzadeh <ja7ad@live.com>
+    homepage: https://meilishell.javad.dev
+    bindir: /usr/local/bin
+    description: Meilishell (meilisearch interactive shell)
+    formats:
+      - deb
+      - rpm
+
+checksum:
+  name_template: 'meilishell_checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - Merge pull request
+      - Merge branch
